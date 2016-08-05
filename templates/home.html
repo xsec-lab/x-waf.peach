@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}{{Tr(Lang, "name")}} - {{Tr(Lang, "tag_line")}}{% endblock %}
+{% block body %}
+	<div class="ui inverted vertical masthead center aligned segment">
+	  {% include Page.NavbarTplPath %}
+	  <div class="ui text container banner">
+	    <h2>{{Tr(Lang, "home.tag_line")}}</h2>
+
+		<a class="ui huge inverted blue basic animated button" tabindex="0" href="{{Page.DocsBaseURL}}">
+		  <div class="visible content">&nbsp;&nbsp;&nbsp;&nbsp;{{Tr(Lang, "home.get_started")}}&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		  <div class="hidden content">
+		    <i class="right arrow icon"></i>
+		  </div>
+		</a>
+
+	    <div id="github-stats">
+	        <iframe src="https://ghbtns.com/github-btn.html?user=xsec-lab&repo=x-waf&type=star&count=true" allowtransparency="true" frameborder="0" scrolling="0" ></iframe>
+	        <iframe src="https://ghbtns.com/github-btn.html?user=xsec-lab&repo=x-waf&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" ></iframe>
+	      </div>
+	  </div>
+	</div>
+
+	<div class="ui vertical stripe segment">
+	  <div class="ui aligned stackable three column grid container">
+	    <div class="column">
+	      <h2 class="ui header">
+	      	<i class="leaf icon"></i> {{Tr(Lang, "home.real_time")}}
+	      </h2>
+	      <p>{{Tr(Lang, "home.real_time_desc")}}</p>
+	    </div>
+        <div class="column">
+	      <h2 class="ui header">
+	      	<i class="rocket icon"></i> {{Tr(Lang, "home.lightweight")}}
+	      </h2>
+	      <p>{{Tr(Lang, "home.lightweight_desc")}}</p>
+	    </div>
+	    <div class="column">
+	      <h2 class="ui header">
+	      	<i class="cubes icon"></i> {{Tr(Lang, "home.searchable")}}
+	      </h2>
+	      <p>{{Tr(Lang, "home.searchable_desc")}}</p>
+	    </div>
+	  </div>
+	</div>
+
+    <div class="ui vertical stripe segment">
+    <div class="ui aligned stackable container">
+      <div class="row" align="center">
+        <div class="center aligned column">
+          <h1 class="ui header">
+            <div class="content">
+              界面预览
+            </div>
+          </h1>
+          <p id="screenshot-scroll">
+            <i class="angle double left icon"></i>
+            滑动
+            <i class="angle double right icon"></i>
+          </p>
+
+          <section class="carousel">
+            <div class="images">
+                <img src="/img/login.png" align="center">
+              <img src="/img/site.png" align="center">
+              <img src="/img/rules.png" align="center">
+              <img src="/img/waf.png" align="center">
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	{% include Page.FooterTplPath %}
+{% endblock %}
